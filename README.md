@@ -11,7 +11,7 @@ Original App Design Project - README Template
 4. [Schema](#Schema)
 
 ## Overview
-This app will act as a digital cookbook for its users. 
+This app will act as a digital cookbook for it’s users. 
 
 ### Description
 
@@ -83,21 +83,21 @@ In this app, users can view recipes from different categories of food and also b
 **Flow Navigation** (Screen to Screen)
 
 * Login Screen
-=> Main 
+    - Main 
 * Signup Screen
-=> Main
+    - Main
 * Main Screen
-=> Stream
+    - Stream
 * Stream
-=> Details Screen
+    - Details Screen
 * Details Screen
-=> None (Just views the recipe details such as recipe name, photo, ingredients, and preparation steps)
+    - None (Just views the recipe details such as recipe name, photo, ingredients, and preparation steps)
 * Search Screen
-=> Stream Screen (filtered)
+    - Stream Screen (filtered)
 * Profile Screen
-=> Creation Screen
+    - Creation Screen
 * Creation Screen
-=> Profile Screen (Takes us back to the profile screen that lists the recipes the user just created)
+    - Profile Screen (Takes us back to the profile screen that lists the recipes the user just created)
 
 
 ## Digital Wireframes and Mockups
@@ -119,5 +119,4 @@ In this app, users can view recipes from different categories of food and also b
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
-
 

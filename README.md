@@ -11,7 +11,7 @@ Original App Design Project - README Template
 4. [Schema](#Schema)
 
 ## Overview
-This app will act as a digital cookbook for it’s users. 
+This app will act as a digital cookbook for its users. 
 
 ### Description
 

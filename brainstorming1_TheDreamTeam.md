@@ -1,9 +1,9 @@
 # Group Milestone #1 (Group 13)
 ## Team members
-Dayaan Mazhar
-Christian Rodrigues
-Richelle Plummer
-Sebastian Zapata
+Dayaan Mazhar  
+Christian Rodrigues  
+Richelle Plummer  
+Sebastian Zapata  
 ## Description
 Making a list of our favorite apps and for each app, identifying 2-3 features of that app that make it stand out.
 ##

@@ -100,15 +100,11 @@ In this app, users can view recipes from different categories of food and also b
 => Profile Screen (Takes us back to the profile screen that lists the recipes the user just created)
 
 
-## Wireframes
+## Digital Wireframes and Mockups
 [Link to the figma file](https://www.figma.com/file/Rq2PwoqwUyF1OuOz4EW0aZ/Wireframe?type=design&node-id=0%3A1&mode=design&t=7d0ad2ZJAHOVMPsC-1)
 
 ![](https://hackmd.io/_uploads/Hk_dCf8za.png)
 
-
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 
@@ -123,4 +119,5 @@ In this app, users can view recipes from different categories of food and also b
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
 

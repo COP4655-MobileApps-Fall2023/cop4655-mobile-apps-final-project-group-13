@@ -1,9 +1,9 @@
 # Group Milestone #2 (Group 13)
 ## Team members
-Dayaan Mazhar
-Christian Rodrigues
-Richelle Plummer
-Sebastian Zapata
+Dayaan Mazhar  
+Christian Rodrigues  
+Richelle Plummer  
+Sebastian Zapata  
 ## Description
 Making a list of unique app ideas that could be candidates for our final project.
 ##

@@ -82,22 +82,22 @@ In this app, users can view recipes from different categories of food and also b
 
 **Flow Navigation** (Screen to Screen)
 
-* Login Screen
-    - Main 
-* Signup Screen
-    - Main
-* Main Screen
-    - Stream
-* Stream
-    - Details Screen
-* Details Screen
-    - None (Just views the recipe details such as recipe name, photo, ingredients, and preparation steps)
-* Search Screen
-    - Stream Screen (filtered)
-* Profile Screen
-    - Creation Screen
-* Creation Screen
-    - Profile Screen (Takes us back to the profile screen that lists the recipes the user just created)
+* Login Screen  
+=> Main 
+* Signup Screen  
+=> Main
+* Main Screen  
+=> Stream
+* Stream  
+=> Details Screen
+* Details Screen  
+=> None (Just views the recipe details such as recipe name, photo, ingredients, and preparation steps)
+* Search Screen  
+=> Stream Screen (filtered)
+* Profile Screen  
+=> Creation Screen
+* Creation Screen  
+=> Profile Screen (Takes us back to the profile screen that lists the recipes the user just created)
 
 
 ## Digital Wireframes and Mockups

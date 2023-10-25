@@ -1,8 +1,7 @@
-# cop4655-mobile-apps-final-project-final-project-group-13
-Original App Design Project - README 
+Original App Design Project - README Template
 ===
 
-# 
+# RecipEasy
 
 ## Table of Contents
 
@@ -23,10 +22,10 @@ In this app, users can view recipes from different categories of food and also b
 [Evaluation of your app across the following attributes]
 - **Category:** Food & Drink.
 - **Mobile:** It is designed for mobile devices, so it will be accessible on both smartphones and tablets.
-- **Story:** Provide users with a digital cookbook, allowing them to access and create recipes. This app aims to simplify the recipe management process and enhance the cooking experience for users.
+- **Story:** The idea of this app is pretty simple to the audience. It will provide users with a digital cookbook, allowing them to access and create recipes. This app aims to simplify the recipe management process and enhance the cooking experience for users. The people including our peers would be more than happy to find a recipe for almost any food they want to cook right on their phone. 
 - **Market:** The market we will be targeting are those who enjoy cooking and want to organize and/or create recipes. This app can be used by chefs on all skill levels.
 - **Habit:** This app can become a habit for users that love to cook and want to find new recipes. Users will always be coming back to the app for numerous reasons; whether it is to scroll through a list of recipes, review one they tried, or even create their own.
-- **Scope:** The app's scope includes basic functions like browsing, searching, adding, rating, and viewing recipes. The optional choice to add a photo to a recipe is also a great function as it gives a visual representation of what the result can be.
+- **Scope:** The app's scope includes basic functions like browsing, searching, adding, rating, and viewing recipes. The optional choice is to add a photo to a recipe is also a great function as it gives a visual representation of what the result can be.
 
 ## Product Spec
 
@@ -36,16 +35,17 @@ In this app, users can view recipes from different categories of food and also b
 * User can log in
 * User can go to a certain recipe category
 * User can view the recipes
-* User can add recipes (recipe name, photo, ingredients, preparation steps)
+* User can add recipes (recipe name, photo, ingredients, preparation steps) and view them
 * User can rate and unrate recipes
 * User can sign out
 
 **Optional Nice-to-have Stories**
 
 * User can add comments on recipes
-* Users can reply to comments
-* Users can see trending recipes
+* User can reply to comments
+* User can see trending recipes
 * User can view their profile
+* User can add a recipe to favorites
 
 ### 2. Screen Archetypes
 
@@ -102,8 +102,7 @@ In this app, users can view recipes from different categories of food and also b
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
 
 ### [BONUS] Digital Wireframes & Mockups
 
@@ -122,3 +121,4 @@ In this app, users can view recipes from different categories of food and also b
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+

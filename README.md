@@ -101,7 +101,7 @@ In this app, users can view recipes from different categories of food and also b
 
 
 ## Wireframes
-
+![](https://hackmd.io/_uploads/rJrPMz8Mp.png)
 
 
 ### [BONUS] Digital Wireframes & Mockups

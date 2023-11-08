@@ -31,13 +31,13 @@ In this app, users can view recipes from different categories of food and also b
 
 ### 1. User Stories (Required and Optional)
 
-* User can sign up
-* User can log in
-* User can go to a certain recipe category
-* User can view the recipes
-* User can add recipes (recipe name, photo, ingredients, preparation steps) and view them
-* User can rate and unrate recipes
-* User can sign out
+- [x] User can sign up
+- [X] User can log in
+- [ ] User can go to a certain recipe category
+- [ ] User can view the recipes
+- [ ] User can add recipes (recipe name, photo, ingredients, preparation steps) and view them
+- [ ] User can rate and unrate recipes
+- [ ] User can sign out
 
 **Optional Nice-to-have Stories**
 
@@ -49,9 +49,9 @@ In this app, users can view recipes from different categories of food and also b
 
 ### 2. Screen Archetypes
 
-- [ ] Login/Register
+- [X] Login/Register
 * User can log in 
-- [ ] Signup Screen
+- [X] Signup Screen
 * User can create a new account
 - [ ] Main Screen
 * User can search for a recipe 

@@ -78,6 +78,11 @@ class SignUpViewController: UIViewController{
                 
                 print("✅ Successfully signed up user \(user)")
                 
+                // Display the alert when signup is successful
+                        let alert = UIAlertController(title: "Sign Up Successful", message: "Congratulations! Your account has been created.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self?.present(alert, animated: true, completion: nil)
+                
                 // Post a notification that the user has successfully signed up.
                 NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
                 

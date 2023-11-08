@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -169,11 +169,21 @@
                                     <constraint firstAttribute="width" constant="343" id="cBy-FA-Pv3"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4i-zi-3Qa">
+                                <rect key="frame" x="154" y="714" width="85" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
+                                <connections>
+                                    <action selector="onLogOutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J5J-dP-PTw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="i4i-zi-3Qa" firstAttribute="centerX" secondItem="oaJ-Rr-XyI" secondAttribute="centerX" id="D5e-B8-eUD"/>
                             <constraint firstItem="oaJ-Rr-XyI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="YF7-dR-VEe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i4i-zi-3Qa" secondAttribute="bottom" constant="69" id="bn6-gH-aQN"/>
                             <constraint firstItem="oaJ-Rr-XyI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="103" id="eHV-hr-c7d"/>
                         </constraints>
                     </view>
@@ -381,7 +391,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ZgM-b4-FNC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lbe-6s-UDQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="lbe-6s-UDQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IVe-Ry-dVT">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -512,7 +522,7 @@
         <!--Recipe Details Screen-->
         <scene sceneID="BPV-Qs-fPT">
             <objects>
-                <viewController id="K7F-I2-r8g" userLabel="Recipe Details Screen" customClass="ViewController" customModule="RecipEasy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="K7F-I2-r8g" userLabel="Recipe Details Screen" customClass="ViewController" customModule="FP_mobileapps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Us-a4-JQ9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -862,13 +872,13 @@
         <image name="Vegan category" width="320" height="200"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

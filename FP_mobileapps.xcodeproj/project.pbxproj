@@ -7,19 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0F3D322AFB03F900573F7A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F3D312AFB03F900573F7A /* SignUpViewController.swift */; };
+		9B0F3D362AFB059800573F7A /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9B0F3D352AFB059800573F7A /* ParseSwift */; };
+		9B0F3D392AFB05A800573F7A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9B0F3D382AFB05A800573F7A /* Alamofire */; };
+		9B0F3D3C2AFB05B800573F7A /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9B0F3D3B2AFB05B800573F7A /* AlamofireImage */; };
+		9B0F3D3E2AFB068100573F7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0F3D3D2AFB068000573F7A /* User.swift */; };
 		9B27502E2AF7E2CC000786A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27502D2AF7E2CC000786A4 /* AppDelegate.swift */; };
 		9B2750302AF7E2CC000786A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B27502F2AF7E2CC000786A4 /* SceneDelegate.swift */; };
-		9B2750322AF7E2CC000786A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2750312AF7E2CC000786A4 /* ViewController.swift */; };
+		9B2750322AF7E2CC000786A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2750312AF7E2CC000786A4 /* LoginViewController.swift */; };
 		9B2750352AF7E2CC000786A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2750332AF7E2CC000786A4 /* Main.storyboard */; };
 		9B2750372AF7E2D0000786A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B2750362AF7E2D0000786A4 /* Assets.xcassets */; };
 		9B27503A2AF7E2D0000786A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2750382AF7E2D0000786A4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B0F3D312AFB03F900573F7A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9B0F3D3D2AFB068000573F7A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9B27502A2AF7E2CC000786A4 /* FP_mobileapps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FP_mobileapps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B27502D2AF7E2CC000786A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B27502F2AF7E2CC000786A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B2750312AF7E2CC000786A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9B2750312AF7E2CC000786A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9B2750342AF7E2CC000786A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B2750362AF7E2D0000786A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B2750392AF7E2D0000786A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B0F3D362AFB059800573F7A /* ParseSwift in Frameworks */,
+				9B0F3D392AFB05A800573F7A /* Alamofire in Frameworks */,
+				9B0F3D3C2AFB05B800573F7A /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +66,11 @@
 		9B27502C2AF7E2CC000786A4 /* FP_mobileapps */ = {
 			isa = PBXGroup;
 			children = (
+				9B0F3D3D2AFB068000573F7A /* User.swift */,
 				9B27502D2AF7E2CC000786A4 /* AppDelegate.swift */,
+				9B0F3D312AFB03F900573F7A /* SignUpViewController.swift */,
+				9B2750312AF7E2CC000786A4 /* LoginViewController.swift */,
 				9B27502F2AF7E2CC000786A4 /* SceneDelegate.swift */,
-				9B2750312AF7E2CC000786A4 /* ViewController.swift */,
 				9B2750332AF7E2CC000786A4 /* Main.storyboard */,
 				9B2750362AF7E2D0000786A4 /* Assets.xcassets */,
 				9B2750382AF7E2D0000786A4 /* LaunchScreen.storyboard */,
@@ -83,6 +95,11 @@
 			dependencies = (
 			);
 			name = FP_mobileapps;
+			packageProductDependencies = (
+				9B0F3D352AFB059800573F7A /* ParseSwift */,
+				9B0F3D382AFB05A800573F7A /* Alamofire */,
+				9B0F3D3B2AFB05B800573F7A /* AlamofireImage */,
+			);
 			productName = FP_mobileapps;
 			productReference = 9B27502A2AF7E2CC000786A4 /* FP_mobileapps.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,11 @@
 				Base,
 			);
 			mainGroup = 9B2750212AF7E2CC000786A4;
+			packageReferences = (
+				9B0F3D342AFB059800573F7A /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				9B0F3D372AFB05A800573F7A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9B0F3D3A2AFB05B800573F7A /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = 9B27502B2AF7E2CC000786A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B2750322AF7E2CC000786A4 /* ViewController.swift in Sources */,
+				9B2750322AF7E2CC000786A4 /* LoginViewController.swift in Sources */,
 				9B27502E2AF7E2CC000786A4 /* AppDelegate.swift in Sources */,
+				9B0F3D322AFB03F900573F7A /* SignUpViewController.swift in Sources */,
+				9B0F3D3E2AFB068100573F7A /* User.swift in Sources */,
 				9B2750302AF7E2CC000786A4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +382,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B0F3D342AFB059800573F7A /* XCRemoteSwiftPackageReference "Parse-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/parse-community/Parse-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		9B0F3D372AFB05A800573F7A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		9B0F3D3A2AFB05B800573F7A /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B0F3D352AFB059800573F7A /* ParseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B0F3D342AFB059800573F7A /* XCRemoteSwiftPackageReference "Parse-Swift" */;
+			productName = ParseSwift;
+		};
+		9B0F3D382AFB05A800573F7A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B0F3D372AFB05A800573F7A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		9B0F3D3B2AFB05B800573F7A /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B0F3D3A2AFB05B800573F7A /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9B2750222AF7E2CC000786A4 /* Project object */;
 }

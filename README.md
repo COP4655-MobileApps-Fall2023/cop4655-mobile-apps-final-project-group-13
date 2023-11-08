@@ -56,7 +56,6 @@ In this app, users can view recipes from different categories of food and also b
 - [ ] Main Screen
 * User can search for a recipe 
 * User can click on a recipe category
-* User can go to personal recipes
 - [ ] Stream 
 * User can view recipes for that category 
 * User can click on a recipe 
@@ -69,7 +68,8 @@ In this app, users can view recipes from different categories of food and also b
 - [ ] Search
 * User can search for a specific recipe they are looking for
 - [ ] Profile 
-* User can view their name and recipes created by them
+* User can view their name and username
+* User can go to their personal recipes
 
 
 ### 3. Navigation

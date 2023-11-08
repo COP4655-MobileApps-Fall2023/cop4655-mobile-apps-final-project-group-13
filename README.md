@@ -120,3 +120,7 @@ In this app, users can view recipes from different categories of food and also b
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
+## Sprint 1
+![ezgif com-video-to-gif-4](https://github.com/COP4655-MobileApps-Fall2023/cop4655-mobile-apps-final-project-final-project-group-13/assets/82067489/7e7376fa-7e31-4352-9b63-120d46749ccb)
+
+

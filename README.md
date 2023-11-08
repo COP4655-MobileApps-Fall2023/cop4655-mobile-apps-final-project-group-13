@@ -37,7 +37,7 @@ In this app, users can view recipes from different categories of food and also b
 - [ ] User can view the recipes
 - [ ] User can add recipes (recipe name, photo, ingredients, preparation steps) and view them
 - [ ] User can rate and unrate recipes
-- [ ] User can sign out
+- [X] User can sign out
 
 **Optional Nice-to-have Stories**
 

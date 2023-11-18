@@ -2,6 +2,13 @@ import ParseSwift
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    private enum Constants {
+        static let loginNavigationControllerIdentifier = "LoginNavigationController"
+        static let homeNavigationControllerIdentifier = "homeNavigationController"
+        static let storyboardIdentifier = "Main"
+        static let TabControllerIdentifier = "tabBarController"
+    }
+    
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -16,20 +23,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
 
         // Check if a current user exists
-        if let currentUser = User.current {
-            print("Logged in user: \(currentUser)")
-            login()
-        } else {
-            print("No user logged in")
-        }
+//        if let currentUser = User.current {
+//            print("Logged in user: \(currentUser)")
+//            login()
+//        } else {
+//            print("No user logged in")
+//        }
     }
 
     private func login() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let loginNavigationController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationController") as? UINavigationController {
-            window?.rootViewController = loginNavigationController
-        }
+        let storyboard = UIStoryboard(name: Constants.storyboardIdentifier, bundle: nil)
+        self.window?.rootViewController = storyboard.instantiateViewController(withIdentifier: Constants.TabControllerIdentifier)
     }
+    
+//    private func login() {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let loginNavigationController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationController") as? UINavigationController {
+//            window?.rootViewController = loginNavigationController
+//        }
+//    }
 
     private func logOut() {
         User.logout { [weak self] result in

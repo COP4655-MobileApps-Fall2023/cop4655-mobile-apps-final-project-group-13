@@ -19,6 +19,10 @@
 		9B2750372AF7E2D0000786A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B2750362AF7E2D0000786A4 /* Assets.xcassets */; };
 		9B27503A2AF7E2D0000786A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2750382AF7E2D0000786A4 /* LaunchScreen.storyboard */; };
 		AACF62FE2B0919CB008EC0D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACF62FD2B0919CB008EC0D9 /* ProfileViewController.swift */; };
+		DB6AD2242B0D7CDE008D7520 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AD2232B0D7CDE008D7520 /* MainViewController.swift */; };
+		DB6AD2292B0D9A8E008D7520 /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AD2282B0D9A8E008D7520 /* RecipeCategory.swift */; };
+		DB6AD22E2B0DA969008D7520 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = DB6AD22D2B0DA969008D7520 /* Nuke */; };
+		DB6AD2302B0DAEF0008D7520 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AD22F2B0DAEF0008D7520 /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,9 @@
 		9B2750392AF7E2D0000786A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B27503B2AF7E2D0000786A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AACF62FD2B0919CB008EC0D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DB6AD2232B0D7CDE008D7520 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DB6AD2282B0D9A8E008D7520 /* RecipeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategory.swift; sourceTree = "<group>"; };
+		DB6AD22F2B0DAEF0008D7520 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 				9B0F3D362AFB059800573F7A /* ParseSwift in Frameworks */,
 				9B0F3D392AFB05A800573F7A /* Alamofire in Frameworks */,
 				9B0F3D3C2AFB05B800573F7A /* AlamofireImage in Frameworks */,
+				DB6AD22E2B0DA969008D7520 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,11 +76,14 @@
 		9B27502C2AF7E2CC000786A4 /* FP_mobileapps */ = {
 			isa = PBXGroup;
 			children = (
+				DB6AD2252B0D9A30008D7520 /* Models */,
+				DB6AD22F2B0DAEF0008D7520 /* RecipeCell.swift */,
 				9B0F3D3D2AFB068000573F7A /* User.swift */,
 				9B27502D2AF7E2CC000786A4 /* AppDelegate.swift */,
 				9B0F3D312AFB03F900573F7A /* SignUpViewController.swift */,
 				9B2750312AF7E2CC000786A4 /* LoginViewController.swift */,
 				9B27502F2AF7E2CC000786A4 /* SceneDelegate.swift */,
+				DB6AD2232B0D7CDE008D7520 /* MainViewController.swift */,
 				AACF62FD2B0919CB008EC0D9 /* ProfileViewController.swift */,
 				9B2750332AF7E2CC000786A4 /* Main.storyboard */,
 				9B2750362AF7E2D0000786A4 /* Assets.xcassets */,
@@ -80,6 +91,14 @@
 				9B27503B2AF7E2D0000786A4 /* Info.plist */,
 			);
 			path = FP_mobileapps;
+			sourceTree = "<group>";
+		};
+		DB6AD2252B0D9A30008D7520 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB6AD2282B0D9A8E008D7520 /* RecipeCategory.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +121,7 @@
 				9B0F3D352AFB059800573F7A /* ParseSwift */,
 				9B0F3D382AFB05A800573F7A /* Alamofire */,
 				9B0F3D3B2AFB05B800573F7A /* AlamofireImage */,
+				DB6AD22D2B0DA969008D7520 /* Nuke */,
 			);
 			productName = FP_mobileapps;
 			productReference = 9B27502A2AF7E2CC000786A4 /* FP_mobileapps.app */;
@@ -135,6 +155,7 @@
 				9B0F3D342AFB059800573F7A /* XCRemoteSwiftPackageReference "Parse-Swift" */,
 				9B0F3D372AFB05A800573F7A /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9B0F3D3A2AFB05B800573F7A /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				DB6AD22C2B0DA969008D7520 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 9B27502B2AF7E2CC000786A4 /* Products */;
 			projectDirPath = "";
@@ -163,10 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6AD2242B0D7CDE008D7520 /* MainViewController.swift in Sources */,
 				AACF62FE2B0919CB008EC0D9 /* ProfileViewController.swift in Sources */,
 				9B2750322AF7E2CC000786A4 /* LoginViewController.swift in Sources */,
+				DB6AD2302B0DAEF0008D7520 /* RecipeCell.swift in Sources */,
 				9B27502E2AF7E2CC000786A4 /* AppDelegate.swift in Sources */,
 				9B0F3D322AFB03F900573F7A /* SignUpViewController.swift in Sources */,
+				DB6AD2292B0D9A8E008D7520 /* RecipeCategory.swift in Sources */,
 				9B0F3D3E2AFB068100573F7A /* User.swift in Sources */,
 				9B2750302AF7E2CC000786A4 /* SceneDelegate.swift in Sources */,
 			);
@@ -414,6 +438,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		DB6AD22C2B0DA969008D7520 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -431,6 +463,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9B0F3D3A2AFB05B800573F7A /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
+		};
+		DB6AD22D2B0DA969008D7520 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB6AD22C2B0DA969008D7520 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -18,6 +18,9 @@
 		9B2750352AF7E2CC000786A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2750332AF7E2CC000786A4 /* Main.storyboard */; };
 		9B2750372AF7E2D0000786A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B2750362AF7E2D0000786A4 /* Assets.xcassets */; };
 		9B27503A2AF7E2D0000786A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2750382AF7E2D0000786A4 /* LaunchScreen.storyboard */; };
+		9B43B4452B0EF78800251B11 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43B4442B0EF78800251B11 /* SearchViewController.swift */; };
+		9B43B4472B0F7E2800251B11 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43B4462B0F7E2800251B11 /* Meal.swift */; };
+		9B43B4492B0F837D00251B11 /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B43B4482B0F837D00251B11 /* MealCell.swift */; };
 		AACF62FE2B0919CB008EC0D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACF62FD2B0919CB008EC0D9 /* ProfileViewController.swift */; };
 		DB6AD2242B0D7CDE008D7520 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AD2232B0D7CDE008D7520 /* MainViewController.swift */; };
 		DB6AD2292B0D9A8E008D7520 /* RecipeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6AD2282B0D9A8E008D7520 /* RecipeCategory.swift */; };
@@ -36,6 +39,9 @@
 		9B2750362AF7E2D0000786A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B2750392AF7E2D0000786A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B27503B2AF7E2D0000786A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B43B4442B0EF78800251B11 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9B43B4462B0F7E2800251B11 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		9B43B4482B0F837D00251B11 /* MealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		AACF62FD2B0919CB008EC0D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DB6AD2232B0D7CDE008D7520 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DB6AD2282B0D9A8E008D7520 /* RecipeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategory.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 			children = (
 				DB6AD2252B0D9A30008D7520 /* Models */,
 				DB6AD22F2B0DAEF0008D7520 /* RecipeCell.swift */,
+				9B43B4482B0F837D00251B11 /* MealCell.swift */,
 				9B0F3D3D2AFB068000573F7A /* User.swift */,
 				9B27502D2AF7E2CC000786A4 /* AppDelegate.swift */,
 				9B0F3D312AFB03F900573F7A /* SignUpViewController.swift */,
@@ -89,6 +96,7 @@
 				9B2750362AF7E2D0000786A4 /* Assets.xcassets */,
 				9B2750382AF7E2D0000786A4 /* LaunchScreen.storyboard */,
 				9B27503B2AF7E2D0000786A4 /* Info.plist */,
+				9B43B4442B0EF78800251B11 /* SearchViewController.swift */,
 			);
 			path = FP_mobileapps;
 			sourceTree = "<group>";
@@ -97,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				DB6AD2282B0D9A8E008D7520 /* RecipeCategory.swift */,
+				9B43B4462B0F7E2800251B11 /* Meal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,9 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B43B4492B0F837D00251B11 /* MealCell.swift in Sources */,
+				9B43B4452B0EF78800251B11 /* SearchViewController.swift in Sources */,
 				DB6AD2242B0D7CDE008D7520 /* MainViewController.swift in Sources */,
 				AACF62FE2B0919CB008EC0D9 /* ProfileViewController.swift in Sources */,
 				9B2750322AF7E2CC000786A4 /* LoginViewController.swift in Sources */,
+				9B43B4472B0F7E2800251B11 /* Meal.swift in Sources */,
 				DB6AD2302B0DAEF0008D7520 /* RecipeCell.swift in Sources */,
 				9B27502E2AF7E2CC000786A4 /* AppDelegate.swift in Sources */,
 				9B0F3D322AFB03F900573F7A /* SignUpViewController.swift in Sources */,

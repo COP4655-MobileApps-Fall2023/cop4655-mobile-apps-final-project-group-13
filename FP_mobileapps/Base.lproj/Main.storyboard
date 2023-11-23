@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -207,7 +207,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="bCZ-Zi-76r">
-                                <rect key="frame" x="25" y="192.66666666666663" width="343" height="467.00000000000011"/>
+                                <rect key="frame" x="25" y="192.66666666666663" width="343" height="467"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="e3I-yX-1kD">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="398.66666666666669"/>
@@ -587,7 +587,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="" image="magnifyingglass" catalog="system"/>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search Your Recipes..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-VU-b1M" userLabel="Search Bar">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Your Recipes..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-VU-b1M" userLabel="Search Bar">
                                         <rect key="frame" x="33.666666666666657" y="0.0" width="330" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="330" id="fRi-ZF-TxN"/>
@@ -607,7 +607,7 @@
                                 <rect key="frame" x="0.0" y="184" width="393" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="113" id="qZh-ig-paG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" rowHeight="113" id="qZh-ig-paG" customClass="MealCell" customModule="FP_mobileapps" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qZh-ig-paG" id="j01-I1-LM6">
@@ -653,6 +653,11 @@
                                                 <constraint firstItem="T7P-wU-fBV" firstAttribute="top" secondItem="j01-I1-LM6" secondAttribute="top" id="wVf-Ax-btu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="yhi-8e-TBS" id="Pll-3D-96y"/>
+                                            <outlet property="recipeImage" destination="FlG-1g-fiI" id="hLx-Ag-RGm"/>
+                                            <outlet property="title" destination="6RD-sf-RIv" id="5Yv-H8-rl4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -671,6 +676,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bPo-hd-oHZ"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="zwf-VU-b1M" id="ilJ-j7-g6w"/>
+                        <outlet property="tableView" destination="mft-Rr-zGA" id="Nsq-yJ-N4e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HvE-Uk-QLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1014,7 +1023,7 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="" image="magnifyingglass" catalog="system"/>
                                                             </button>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search Your Recipes..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uoz-bn-vJB" userLabel="Search Bar">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Your Recipes..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uoz-bn-vJB" userLabel="Search Bar">
                                                                 <rect key="frame" x="33.666666666666657" y="0.0" width="330" height="39"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="330" id="FTz-wX-d6M"/>

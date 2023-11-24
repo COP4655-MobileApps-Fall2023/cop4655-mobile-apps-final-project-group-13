@@ -108,7 +108,11 @@ In this app, users can view recipes from different categories of food and also b
 ## Sprint 1
 ![ezgif com-video-to-gif-4](https://github.com/COP4655-MobileApps-Fall2023/cop4655-mobile-apps-final-project-final-project-group-13/assets/82067489/7e7376fa-7e31-4352-9b63-120d46749ccb)
 
+## Sprint 2
+![Sprint2Gif](ezgif.com-video-to-gif.gif)
 
+### Demo prep
+<iframe src="https://player.vimeo.com/video/888008070?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" width="714" height="1580" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="Screen Recording 2023-11-24 at 9.18.53 AM"></iframe>
 
 ## Schema 
 

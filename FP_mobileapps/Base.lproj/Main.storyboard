@@ -590,7 +590,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Your Recipes..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-VU-b1M" userLabel="Search Bar">
                                         <rect key="frame" x="33.666666666666657" y="0.0" width="330" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="330" id="fRi-ZF-TxN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="fRi-ZF-TxN"/>
                                         </constraints>
                                         <color key="textColor" red="0.066666666669999999" green="0.2470588235" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
@@ -619,18 +619,25 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FlG-1g-fiI">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="113"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="113" id="0Dg-wS-MPy"/>
+                                                                <constraint firstAttribute="width" constant="120" id="Bce-32-dN3"/>
+                                                            </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="SBo-DC-kbN">
                                                             <rect key="frame" x="128" y="20" width="265" height="73"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RD-sf-RIv">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RD-sf-RIv">
                                                                     <rect key="frame" x="0.0" y="0.0" width="51" height="30"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhi-8e-TBS">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhi-8e-TBS">
                                                                     <rect key="frame" x="0.0" y="52" width="100.33333333333333" height="21"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="21" id="r50-x7-rTu"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -639,7 +646,6 @@
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="SBo-DC-kbN" firstAttribute="leading" secondItem="FlG-1g-fiI" secondAttribute="trailing" id="E7X-j8-DVc"/>
                                                         <constraint firstAttribute="bottom" secondItem="SBo-DC-kbN" secondAttribute="bottom" constant="20" id="e4M-wj-R8v"/>
                                                         <constraint firstItem="SBo-DC-kbN" firstAttribute="top" secondItem="T7P-wU-fBV" secondAttribute="top" constant="20" id="pza-yt-DhI"/>
                                                         <constraint firstAttribute="trailing" secondItem="SBo-DC-kbN" secondAttribute="trailing" id="vx9-1j-8bR"/>

@@ -91,13 +91,13 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 
                 do {
                     //print to show data pulled
-                    print("JSON Data: \(String(data: data, encoding: .utf8) ?? "Unable to convert data to string")")
+                    //print("JSON Data: \(String(data: data, encoding: .utf8) ?? "Unable to convert data to string")")
 
                     //decode jsondata
                     let decoder = JSONDecoder()
                     let meals = try decoder.decode(MealsResponse.self, from: data)
                     
-                    print("Decoded Meals: \(meals)")
+                   // print("Decoded Meals: \(meals)")
 
                     DispatchQueue.main.async {
                         self?.searchResults = meals.meals
@@ -106,11 +106,22 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                     }
                 } catch let decodingError {
                     print("❌ Error decoding JSON: \(decodingError)")
+                    DispatchQueue.main.async {
+                            self?.showNoResultsAlert()
+                        }
                 } catch {
                     print("❌ Unknown error: \(error)")
+                 //   self?.showNoResultsAlert()
                 }
             }
 
             task.resume()
         }
+
+    func showNoResultsAlert(){
+        let alert = UIAlertController(title: "No Results", message: "No Results shown for given search", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title:"OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }

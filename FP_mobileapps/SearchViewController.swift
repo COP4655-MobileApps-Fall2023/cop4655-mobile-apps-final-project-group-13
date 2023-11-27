@@ -57,17 +57,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             return true
         }
 
-        func performSearch(query: String) {
-            print("")
-            //search url
-            let searchURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=\(query)"
-            
-            guard let url = URL(string: searchURL) else {
-                print("Error: Invalid URL")
-                return
-            }
+    func performSearch(query: String) {
+        // Convert the query to lowercase
+        let lowercaseQuery = query.lowercased()
 
-            fetchData(from: url)
+        // Search URL with the lowercase query
+        let searchURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=\(lowercaseQuery)"
+
+        guard let url = URL(string: searchURL) else {
+            print("Error: Invalid URL")
+            return
+        }
+
+        fetchData(from: url)
     }
     
     func fetchData(from url: URL) {

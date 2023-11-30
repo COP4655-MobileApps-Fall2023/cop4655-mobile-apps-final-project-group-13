@@ -126,4 +126,18 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         self.present(alert, animated: true, completion: nil)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedMeal = searchResults[indexPath.row]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "searchDetails" {
+            if let indexPath = tableView.indexPathForSelectedRow,
+               let detailViewController = segue.destination as? RecipeDetailsController {
+                let selectedMeal = searchResults[indexPath.row]
+                detailViewController.meal = selectedMeal
+            }
+        }
+    }
+    
 }

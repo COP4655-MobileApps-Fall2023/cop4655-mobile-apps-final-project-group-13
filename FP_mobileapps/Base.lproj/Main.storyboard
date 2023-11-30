@@ -564,11 +564,12 @@
                         <viewLayoutGuide key="safeArea" id="jY9-kt-0n1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OOs-hW-q5V"/>
                     <connections>
-                        <outlet property="cookingLabel" destination="HhG-gp-u0h" id="puB-iM-FXt"/>
-                        <outlet property="ingredientsLabel" destination="wIH-nh-uRA" id="vxL-uu-0Jx"/>
+                        <outlet property="cookingLabel" destination="HhG-gp-u0h" id="r9B-oi-puF"/>
+                        <outlet property="ingredientsLabel" destination="wIH-nh-uRA" id="Yv9-hu-Upj"/>
                         <outlet property="recipeImageView" destination="on8-0q-dPc" id="8Bw-3T-ILY"/>
-                        <outlet property="recipeNameLabel" destination="o9H-qi-7Fg" id="fD6-Ng-G2j"/>
+                        <outlet property="recipeNameLabel" destination="o9H-qi-7Fg" id="lhS-Zc-51z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZu-KS-GvO" sceneMemberID="firstResponder"/>
@@ -669,6 +670,7 @@
                                             <outlet property="descriptionLabel" destination="yhi-8e-TBS" id="Pll-3D-96y"/>
                                             <outlet property="recipeImage" destination="FlG-1g-fiI" id="hLx-Ag-RGm"/>
                                             <outlet property="title" destination="6RD-sf-RIv" id="5Yv-H8-rl4"/>
+                                            <segue destination="K7F-I2-r8g" kind="show" identifier="searchDetails" id="tid-nC-2hp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

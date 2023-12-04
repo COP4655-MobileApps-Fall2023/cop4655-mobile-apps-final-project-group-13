@@ -66,16 +66,22 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         // Convert the query to lowercase
         let lowercaseQuery = query.lowercased()
 
-        // Search URL with the lowercase query
-        let searchURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=\(lowercaseQuery)"
+        // Encode the query string
+        if let encodedQuery = lowercaseQuery.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            // Search URL with the encoded query
+            let searchURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=\(encodedQuery)"
 
-        guard let url = URL(string: searchURL) else {
-            print("Error: Invalid URL")
-            return
+            guard let url = URL(string: searchURL) else {
+                print("Error: Invalid URL")
+                return
+            }
+
+            fetchData(from: url)
+        } else {
+            print("Error: Unable to encode the query string")
         }
-
-        fetchData(from: url)
     }
+
     
     func fetchData(from url: URL) {
         //perform data fetching using URLSession

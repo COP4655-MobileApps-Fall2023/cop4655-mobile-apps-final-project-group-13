@@ -10,6 +10,37 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
+    
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadUserData()
+    }
+    
+  
+    private func loadUserData(){
+        if let currentUser = User.current {
+                fullNameLabel.text = currentUser.fullName
+
+                // Safely unwrap the optional username
+                if let username = currentUser.username {
+                    // Concatenate "@" with the username
+                    let formattedUsername = "@" + username
+                    usernameLabel.text = formattedUsername
+                } else {
+                    // Handle the case where the username is nil
+                    usernameLabel.text = "@UnknownUser"
+                }
+
+                
+               
+            } else {
+                showAlert(description: "User not Found")
+            }    }
+    
     @IBAction func onLogOutTapped(_ sender: Any) {
         showConfirmLogoutAlert()
     }

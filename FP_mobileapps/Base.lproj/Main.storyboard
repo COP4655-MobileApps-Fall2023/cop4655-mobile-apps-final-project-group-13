@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -579,7 +579,7 @@
         <!--Search View Controller-->
         <scene sceneID="VTD-G7-e5T">
             <objects>
-                <viewController id="P9Q-ni-f46" userLabel="Search View Controller" customClass="SearchViewController" customModule="FP_mobileapps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="P9Q-ni-f46" userLabel="Search View Controller" customClass="SearchViewController" customModule="FP_mobileapps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ysp-Rw-T1p">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -611,7 +611,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mft-Rr-zGA">
-                                <rect key="frame" x="0.0" y="184" width="393" height="668"/>
+                                <rect key="frame" x="0.0" y="142" width="393" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" rowHeight="113" id="qZh-ig-paG" customClass="MealCell" customModule="FP_mobileapps" customModuleProvider="target">
@@ -681,7 +681,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="mft-Rr-zGA" secondAttribute="bottom" id="1WD-mG-pBq"/>
                             <constraint firstAttribute="trailing" secondItem="mft-Rr-zGA" secondAttribute="trailing" id="9FX-cK-djX"/>
-                            <constraint firstItem="mft-Rr-zGA" firstAttribute="top" secondItem="cko-w5-7QK" secondAttribute="bottom" constant="50" id="HRa-EQ-XMS"/>
+                            <constraint firstItem="mft-Rr-zGA" firstAttribute="top" secondItem="cko-w5-7QK" secondAttribute="bottom" constant="8" id="HRa-EQ-XMS"/>
                             <constraint firstAttribute="trailing" secondItem="mft-Rr-zGA" secondAttribute="trailing" id="IcU-Se-NHa"/>
                             <constraint firstItem="mft-Rr-zGA" firstAttribute="leading" secondItem="Ysp-Rw-T1p" secondAttribute="leading" id="WpQ-1b-QiA"/>
                             <constraint firstItem="mft-Rr-zGA" firstAttribute="leading" secondItem="Ysp-Rw-T1p" secondAttribute="leading" id="iac-Do-5gK"/>
@@ -1021,6 +1021,9 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68q-Bw-P8Z">
                                                         <rect key="frame" x="0.0" y="0.0" width="148.66666666666666" height="42"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="42" id="m4w-sb-XFp"/>
+                                                        </constraints>
                                                         <attributedString key="attributedText">
                                                             <fragment content="RecipEasy">
                                                                 <attributes>
@@ -1033,28 +1036,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mPe-YD-SZI">
-                                                        <rect key="frame" x="0.0" y="61" width="363.66666666666669" height="39"/>
+                                                        <rect key="frame" x="0.0" y="61" width="370" height="39"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgI-oh-a6y" userLabel="Search Button">
-                                                                <rect key="frame" x="0.0" y="0.0" width="25.666666666666668" height="39"/>
-                                                                <color key="tintColor" red="0.12941176469999999" green="0.38823529410000002" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title="" image="magnifyingglass" catalog="system"/>
-                                                            </button>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Your Recipes..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uoz-bn-vJB" userLabel="Search Bar">
-                                                                <rect key="frame" x="33.666666666666657" y="0.0" width="330" height="39"/>
+                                                            <searchBar opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zZQ-88-xdJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="370" height="39"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="330" id="FTz-wX-d6M"/>
+                                                                    <constraint firstAttribute="width" constant="370" id="f6s-bw-HjL"/>
                                                                 </constraints>
-                                                                <color key="textColor" red="0.066666666669999999" green="0.2470588235" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                            </textField>
+                                                            </searchBar>
                                                         </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="Uoz-bn-vJB" secondAttribute="trailing" id="99t-Jm-RnH"/>
-                                                            <constraint firstItem="Uoz-bn-vJB" firstAttribute="leading" secondItem="dgI-oh-a6y" secondAttribute="trailing" constant="8" id="ftf-NK-ujp"/>
-                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
@@ -1149,12 +1140,14 @@
                     <navigationItem key="navigationItem" id="h7A-TU-7x4"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="searchBar" destination="zZQ-88-xdJ" id="z9M-PC-Rk2"/>
                         <outlet property="tableView" destination="Ztw-J6-844" id="i7v-Iu-M0z"/>
+                        <segue destination="P9Q-ni-f46" kind="show" identifier="ShowSearchScreen" id="iNG-td-g2i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mPD-xp-UJZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3831.2977099236641" y="-780.28169014084506"/>
+            <point key="canvasLocation" x="3860" y="-780"/>
         </scene>
         <!--Item-->
         <scene sceneID="hHP-62-g38">
@@ -1234,6 +1227,9 @@
             <point key="canvasLocation" x="961" y="-780"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iNG-td-g2i"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Lock" width="90" height="92"/>
         <image name="Name" width="90" height="92"/>
@@ -1247,7 +1243,7 @@
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

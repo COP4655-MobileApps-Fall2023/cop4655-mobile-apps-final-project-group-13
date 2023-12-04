@@ -8,11 +8,12 @@
 import Foundation
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     // Added a recipes property
     var recipes: [RecipeCategory] = []
     
+    @IBOutlet weak var searchBar: UISearchBar!
     // Added table view outlet
     @IBOutlet weak var tableView: UITableView!
     
@@ -72,6 +73,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
         task.resume()
         
         tableView.dataSource = self
+        searchBar.delegate = self
         
         // Setting row height to automatic
         // tableView.rowHeight = 155
@@ -113,6 +115,16 @@ class MainViewController: UIViewController, UITableViewDataSource {
         }
     }
 */
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        if let searchText = searchBar.text, !searchText.isEmpty {
+            if let searchViewController = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
+                searchViewController.searchQuery = searchText
+                self.navigationController?.pushViewController(searchViewController, animated: true)
+            }
+        }
+    }
+
     // Deselecting the row after a short delay
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -123,6 +135,8 @@ class MainViewController: UIViewController, UITableViewDataSource {
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
+    
+   
 }
 
     

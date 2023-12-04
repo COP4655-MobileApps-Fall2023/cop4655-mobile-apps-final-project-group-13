@@ -12,6 +12,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     // Array to store search results
     var searchResults: [Meal] = []
+    var searchQuery: String?
     
     
     @IBOutlet weak var searchTextField: UITextField!
@@ -28,6 +29,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         //set delegate for the search text field
         searchTextField.delegate = self
+        
+        if let query = searchQuery, !query.isEmpty{
+            performSearch(query: query)
+        }
         
     }
     

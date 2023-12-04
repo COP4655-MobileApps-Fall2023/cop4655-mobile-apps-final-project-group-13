@@ -88,6 +88,7 @@
 				DB6AD22F2B0DAEF0008D7520 /* RecipeCell.swift */,
 				9B43B4482B0F837D00251B11 /* MealCell.swift */,
 				9B0F3D3D2AFB068000573F7A /* User.swift */,
+				9B43B4442B0EF78800251B11 /* SearchViewController.swift */,
 				9B27502D2AF7E2CC000786A4 /* AppDelegate.swift */,
 				9B0F3D312AFB03F900573F7A /* SignUpViewController.swift */,
 				9B2750312AF7E2CC000786A4 /* LoginViewController.swift */,
@@ -99,7 +100,6 @@
 				9B2750362AF7E2D0000786A4 /* Assets.xcassets */,
 				9B2750382AF7E2D0000786A4 /* LaunchScreen.storyboard */,
 				9B27503B2AF7E2D0000786A4 /* Info.plist */,
-				9B43B4442B0EF78800251B11 /* SearchViewController.swift */,
 			);
 			path = FP_mobileapps;
 			sourceTree = "<group>";

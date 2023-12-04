@@ -31,6 +31,7 @@ class RecipeDetailsController: UIViewController {
         // Safely unwrap and set recipe name
         if let recipeName = meal?.strMeal {
             recipeNameLabel.text = recipeName
+            recipeNameLabel.isEditable = false
         } else {
             print("Error: Recipe name is nil")
         }
@@ -38,13 +39,25 @@ class RecipeDetailsController: UIViewController {
         // Safely unwrap and set ingredients
         if let ingredients = meal?.formattedIngredients {
             ingredientsLabel.text = ingredients
+            //disable scrolling within the text view
+            ingredientsLabel.isScrollEnabled = false
+            ingredientsLabel.isEditable = false
+            
+            ingredientsLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
         } else {
             print("Error: Ingredients are nil")
         }
 
+        // Set content compression resistance priority for cookingLabel (or preparationLabel, they are the same in your case)
+       
+        cookingLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
         // Safely unwrap and set cooking instructions
         if let instructions = meal?.strInstructions {
             cookingLabel.text = instructions
+            
+            //disable scrolling
+            cookingLabel.isScrollEnabled = false
+            cookingLabel.isEditable = false
         } else {
             print("Error: Cooking instructions are nil")
         }

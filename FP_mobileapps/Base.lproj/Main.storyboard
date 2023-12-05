@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -554,7 +554,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZu-KS-GvO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4777.8625954198469" y="-780.28169014084506"/>
+            <point key="canvasLocation" x="5581" y="-780"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="VTD-G7-e5T">
@@ -1006,7 +1006,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8dC-z4-gKb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5700" y="-780.28169014084506"/>
+            <point key="canvasLocation" x="6393" y="-780"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="jfp-zi-raC">
@@ -1232,6 +1232,123 @@
             </objects>
             <point key="canvasLocation" x="961" y="-780"/>
         </scene>
+        <!--Stream View Controller-->
+        <scene sceneID="qaw-RY-3j7">
+            <objects>
+                <viewController id="dwv-6U-k6d" userLabel="Stream View Controller" customClass="StreamViewController" customModule="FP_mobileapps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8fP-DF-xAd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84q-ib-2f4">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cR5-Ta-NAc">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="836"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Un-kW-AIB" userLabel="Recipes title">
+                                                <rect key="frame" x="83.666666666666671" y="87" width="225.66666666666663" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="33" id="ave-ZY-ZaK"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Seafood Recipes">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.082352941176470587" green="0.30588235294117649" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="28" name="Arial-BoldMT"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vbd-ap-aBv">
+                                                <rect key="frame" x="0.0" y="130" width="393" height="706"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipesCell" rowHeight="193" id="mBg-kg-xGz" userLabel="RecipesCell" customClass="RecipesCell" customModule="FP_mobileapps" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="393" height="193"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mBg-kg-xGz" id="fRn-Js-cyG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="193"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="O70-3d-YnC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="193"/>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxu-IP-WdR" userLabel="Recipe name">
+                                                                    <rect key="frame" x="20" y="126" width="270.66666666666669" height="56"/>
+                                                                    <attributedString key="attributedText">
+                                                                        <fragment content="Baked salmon with fennel &amp; tomatoes">
+                                                                            <attributes>
+                                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <font key="NSFont" size="20" name="HelveticaNeue-Bold"/>
+                                                                                <font key="NSOriginalFont" size="20" name="HelveticaNeue-Bold"/>
+                                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                            </attributes>
+                                                                        </fragment>
+                                                                    </attributedString>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="Nxu-IP-WdR" firstAttribute="top" secondItem="fRn-Js-cyG" secondAttribute="topMargin" constant="115" id="81S-ob-sqQ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="O70-3d-YnC" secondAttribute="trailing" id="Vog-SP-ABF"/>
+                                                                <constraint firstItem="O70-3d-YnC" firstAttribute="top" secondItem="fRn-Js-cyG" secondAttribute="top" id="YEL-Ju-2wk"/>
+                                                                <constraint firstItem="Nxu-IP-WdR" firstAttribute="bottom" secondItem="fRn-Js-cyG" secondAttribute="bottomMargin" id="a4p-CO-8rz"/>
+                                                                <constraint firstItem="Nxu-IP-WdR" firstAttribute="leading" secondItem="fRn-Js-cyG" secondAttribute="leadingMargin" id="dai-n3-BEe"/>
+                                                                <constraint firstItem="O70-3d-YnC" firstAttribute="leading" secondItem="fRn-Js-cyG" secondAttribute="leading" id="iwK-et-mpz"/>
+                                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Nxu-IP-WdR" secondAttribute="trailing" id="mmi-cv-dhQ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="O70-3d-YnC" secondAttribute="bottom" id="vFA-0C-hVR"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="recipeName" destination="Nxu-IP-WdR" id="M5K-0r-TE5"/>
+                                                            <outlet property="recipesImage" destination="O70-3d-YnC" id="5gw-k4-Rxz"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Vbd-ap-aBv" secondAttribute="bottom" id="6mI-om-pHu"/>
+                                            <constraint firstItem="Vbd-ap-aBv" firstAttribute="leading" secondItem="cR5-Ta-NAc" secondAttribute="leading" id="L6p-DV-opy"/>
+                                            <constraint firstItem="6Un-kW-AIB" firstAttribute="top" secondItem="cR5-Ta-NAc" secondAttribute="topMargin" constant="20" id="fam-mJ-1Ac"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vbd-ap-aBv" secondAttribute="trailing" id="k6t-rK-Fnd"/>
+                                            <constraint firstItem="6Un-kW-AIB" firstAttribute="centerX" secondItem="cR5-Ta-NAc" secondAttribute="centerX" id="p4m-tu-Hd8"/>
+                                            <constraint firstItem="Vbd-ap-aBv" firstAttribute="top" secondItem="6Un-kW-AIB" secondAttribute="bottom" constant="10" id="qZ5-iF-Zuy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cR5-Ta-NAc" secondAttribute="bottom" id="2jH-ER-YfN"/>
+                                    <constraint firstItem="cR5-Ta-NAc" firstAttribute="height" secondItem="84q-ib-2f4" secondAttribute="height" multiplier="0.981221" id="Qwb-PA-OIH"/>
+                                    <constraint firstItem="cR5-Ta-NAc" firstAttribute="leading" secondItem="84q-ib-2f4" secondAttribute="leading" id="WEr-by-yT7"/>
+                                    <constraint firstAttribute="trailing" secondItem="cR5-Ta-NAc" secondAttribute="trailing" id="rqU-Aj-xIF"/>
+                                    <constraint firstItem="cR5-Ta-NAc" firstAttribute="top" secondItem="84q-ib-2f4" secondAttribute="top" id="t7H-XJ-S9r"/>
+                                    <constraint firstItem="cR5-Ta-NAc" firstAttribute="width" secondItem="84q-ib-2f4" secondAttribute="width" id="zzz-WO-Y6v"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0gB-MM-TKM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="84q-ib-2f4" firstAttribute="leading" secondItem="0gB-MM-TKM" secondAttribute="leading" id="OrW-JZ-6C7"/>
+                            <constraint firstItem="84q-ib-2f4" firstAttribute="top" secondItem="8fP-DF-xAd" secondAttribute="top" id="cxC-te-c6q"/>
+                            <constraint firstAttribute="bottom" secondItem="84q-ib-2f4" secondAttribute="bottom" id="dBi-ua-yKB"/>
+                            <constraint firstItem="84q-ib-2f4" firstAttribute="trailing" secondItem="0gB-MM-TKM" secondAttribute="trailing" id="nOo-YD-U7h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rd3-Cb-51o"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vbd-ap-aBv" id="7Cj-Qy-hBH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aX4-do-2i9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4743" y="-780"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iNG-td-g2i"/>
@@ -1242,6 +1359,7 @@
         <image name="Pasted Graphic" width="60" height="59"/>
         <image name="Pasted Graphic 1" width="57" height="60"/>
         <image name="Pasted Graphic 2" width="58" height="64"/>
+        <image name="Recipe" width="700" height="700"/>
         <image name="Screenshot 2023-11-07 at 10.25.12 AM" width="90" height="92"/>
         <image name="Vegan category" width="320" height="200"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>

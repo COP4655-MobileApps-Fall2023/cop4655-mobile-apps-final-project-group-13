@@ -84,9 +84,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UISearchBarDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Get a cell with identifier, "RecipeCell"
+        // Get a cell with identifier, "RecipeCategoryCell"
         // the `dequeueReusableCell(withIdentifier:)` method just returns a generic UITableViewCell so it's necessary to cast it to our specific custom cell.
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCategoryCell", for: indexPath) as! RecipeCategoryCell
 
         // Get the recipe that corresponds to the table view row
         let recipe = recipes[indexPath.row]
@@ -125,6 +125,32 @@ class MainViewController: UIViewController, UITableViewDataSource, UISearchBarDe
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let selectedCategory = recipes[indexPath.row].strCategory
+            performSegue(withIdentifier: "ShowRecipesSegue", sender: nil)
+        }
+
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            print("Preparing for segue")
+
+            if segue.identifier == "ShowRecipesSegue" {
+                print("Segue identifier matches")
+
+                if let streamViewController = segue.destination as? StreamViewController {
+                    // Get the selected index path
+                    if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                        // Get the selected category using the index path
+                        let selectedCategory = recipes[selectedIndexPath.row].strCategory
+                        print("Selected category (prepare): \(selectedCategory)")
+
+                        // Set the selected category in StreamViewController
+                        streamViewController.selectedCategory = selectedCategory
+                    }
+                }
+            }
+        }
+
+    
     // Deselecting the row after a short delay
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -135,10 +161,4 @@ class MainViewController: UIViewController, UITableViewDataSource, UISearchBarDe
             tableView.deselectRow(at: indexPath, animated: true)
         }
     }
-    
-   
 }
-
-    
-    
-

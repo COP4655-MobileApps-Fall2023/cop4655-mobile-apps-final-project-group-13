@@ -84,4 +84,18 @@ class StreamViewController: UIViewController, UITableViewDataSource {
         cell.configure(with: recipe)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedMealID = recipes[indexPath.row].idMeal // Assuming each recipe has an 'idMeal' property
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "streamDetails",
+           let detailViewController = segue.destination as? RecipeDetailsController,
+           let indexPath = tableView.indexPathForSelectedRow { // Get the index path of the selected row
+            let selectedMealID = recipes[indexPath.row].idMeal // Get the meal ID from data source
+            detailViewController.idMeal = selectedMealID // Pass the meal ID to the detail view controller
+        }
+    }
+
 }

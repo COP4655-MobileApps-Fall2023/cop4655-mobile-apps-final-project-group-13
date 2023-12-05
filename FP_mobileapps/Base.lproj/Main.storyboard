@@ -1144,11 +1144,11 @@
             </objects>
             <point key="canvasLocation" x="3860" y="-780"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="hHP-62-g38">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nr0-xz-2vq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="house.fill" catalog="system" id="0bm-qr-5J3"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="0bm-qr-5J3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bfA-Ru-SVI">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

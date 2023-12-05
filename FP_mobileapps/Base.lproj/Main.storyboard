@@ -1343,6 +1343,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="rd3-Cb-51o"/>
                     <connections>
+                        <outlet property="recipesTitle" destination="6Un-kW-AIB" id="iKY-rI-emv"/>
                         <outlet property="tableView" destination="Vbd-ap-aBv" id="7Cj-Qy-hBH"/>
                     </connections>
                 </viewController>

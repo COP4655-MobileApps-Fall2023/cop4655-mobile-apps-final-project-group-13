@@ -13,6 +13,8 @@ class StreamViewController: UIViewController, UITableViewDataSource {
     var selectedCategory: String?
     var recipes: [Recipes] = []
 
+    
+    @IBOutlet weak var recipesTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -21,6 +23,9 @@ class StreamViewController: UIViewController, UITableViewDataSource {
         if let selectedCategory = selectedCategory {
             // Debug: Print selected category
             print("Selected Category: \(selectedCategory)")
+            
+            // Assigning recipesTitle to the selectedCategory
+            recipesTitle.text = "\(selectedCategory) Recipes"
             
             // Construct URL for API request
             let urlString = "https://www.themealdb.com/api/json/v1/1/filter.php?c=\(selectedCategory)"

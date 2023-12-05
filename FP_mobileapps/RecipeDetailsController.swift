@@ -126,6 +126,7 @@ class RecipeDetailsController: UIViewController {
         ingredientsLabel.text = mealDetails.formattedIngredients
         ingredientsLabel.isScrollEnabled = false
         ingredientsLabel.isEditable = false
+        ingredientsLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
 
         // Update the cooking instructions
         cookingLabel.text = mealDetails.strInstructions

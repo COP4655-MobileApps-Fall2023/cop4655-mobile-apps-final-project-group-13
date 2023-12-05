@@ -1248,7 +1248,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="836"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Un-kW-AIB" userLabel="Recipes title">
-                                                <rect key="frame" x="83.666666666666671" y="48" width="225.66666666666663" height="33"/>
+                                                <rect key="frame" x="83.666666666666671" y="8" width="225.66666666666663" height="33"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="33" id="ave-ZY-ZaK"/>
                                                 </constraints>
@@ -1264,21 +1264,24 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vbd-ap-aBv">
-                                                <rect key="frame" x="0.0" y="91" width="393" height="745"/>
+                                                <rect key="frame" x="23" y="61" width="347" height="775"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="193" id="mBg-kg-xGz" customClass="RecipeCell" customModule="FP_mobileapps" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="50" width="393" height="193"/>
+                                                        <rect key="frame" x="0.0" y="50" width="347" height="193"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mBg-kg-xGz" id="fRn-Js-cyG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="193"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="347" height="193"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recipe" translatesAutoresizingMaskIntoConstraints="NO" id="O70-3d-YnC" userLabel="Recipes Image">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="193"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="347" height="193"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="190" id="8Na-YZ-M9b"/>
+                                                                    </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxu-IP-WdR" userLabel="Recipe name">
-                                                                    <rect key="frame" x="20" y="126" width="270.66666666666669" height="56"/>
+                                                                    <rect key="frame" x="10" y="126" width="270.66666666666669" height="56"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Baked salmon with fennel &amp; tomatoes">
                                                                             <attributes>
@@ -1297,7 +1300,7 @@
                                                                 <constraint firstAttribute="trailing" secondItem="O70-3d-YnC" secondAttribute="trailing" id="Vog-SP-ABF"/>
                                                                 <constraint firstItem="O70-3d-YnC" firstAttribute="top" secondItem="fRn-Js-cyG" secondAttribute="top" id="YEL-Ju-2wk"/>
                                                                 <constraint firstItem="Nxu-IP-WdR" firstAttribute="bottom" secondItem="fRn-Js-cyG" secondAttribute="bottomMargin" id="a4p-CO-8rz"/>
-                                                                <constraint firstItem="Nxu-IP-WdR" firstAttribute="leading" secondItem="fRn-Js-cyG" secondAttribute="leadingMargin" id="dai-n3-BEe"/>
+                                                                <constraint firstItem="Nxu-IP-WdR" firstAttribute="leading" secondItem="fRn-Js-cyG" secondAttribute="leadingMargin" constant="-10" id="dai-n3-BEe"/>
                                                                 <constraint firstItem="O70-3d-YnC" firstAttribute="leading" secondItem="fRn-Js-cyG" secondAttribute="leading" id="iwK-et-mpz"/>
                                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Nxu-IP-WdR" secondAttribute="trailing" id="mmi-cv-dhQ"/>
                                                                 <constraint firstAttribute="bottom" secondItem="O70-3d-YnC" secondAttribute="bottom" id="vFA-0C-hVR"/>
@@ -1313,12 +1316,12 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Vbd-ap-aBv" secondAttribute="bottom" id="6mI-om-pHu"/>
-                                            <constraint firstItem="Vbd-ap-aBv" firstAttribute="leading" secondItem="cR5-Ta-NAc" secondAttribute="leading" id="L6p-DV-opy"/>
-                                            <constraint firstItem="6Un-kW-AIB" firstAttribute="top" secondItem="cR5-Ta-NAc" secondAttribute="topMargin" constant="40" id="fam-mJ-1Ac"/>
-                                            <constraint firstAttribute="trailing" secondItem="Vbd-ap-aBv" secondAttribute="trailing" id="k6t-rK-Fnd"/>
+                                            <constraint firstItem="Vbd-ap-aBv" firstAttribute="top" secondItem="6Un-kW-AIB" secondAttribute="bottom" constant="20" id="IPt-rE-il3"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Vbd-ap-aBv" secondAttribute="trailing" constant="15" id="LdD-Tc-aMl"/>
+                                            <constraint firstItem="6Un-kW-AIB" firstAttribute="top" secondItem="cR5-Ta-NAc" secondAttribute="topMargin" id="fam-mJ-1Ac"/>
+                                            <constraint firstItem="Vbd-ap-aBv" firstAttribute="leading" secondItem="cR5-Ta-NAc" secondAttribute="leadingMargin" constant="15" id="gDI-o8-mJy"/>
                                             <constraint firstItem="6Un-kW-AIB" firstAttribute="centerX" secondItem="cR5-Ta-NAc" secondAttribute="centerX" id="p4m-tu-Hd8"/>
-                                            <constraint firstItem="Vbd-ap-aBv" firstAttribute="top" secondItem="6Un-kW-AIB" secondAttribute="bottom" constant="10" id="qZ5-iF-Zuy"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vbd-ap-aBv" secondAttribute="bottom" id="t6F-u8-393"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1349,7 +1352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aX4-do-2i9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4782" y="-780"/>
+            <point key="canvasLocation" x="4780.9160305343512" y="-780.28169014084506"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

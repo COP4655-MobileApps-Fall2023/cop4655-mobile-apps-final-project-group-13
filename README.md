@@ -36,7 +36,6 @@ In this app, users can view recipes from different categories of food and also b
 - [ ] User can go to a certain recipe category
 - [ ] User can view the recipes
 - [ ] User can add recipes (recipe name, photo, ingredients, preparation steps) and view them
-- [ ] User can rate and unrate recipes
 - [ ] User can sign out
 
 **Optional Nice-to-have Stories**
@@ -46,6 +45,7 @@ In this app, users can view recipes from different categories of food and also b
 * User can see trending recipes
 * User can view their profile
 * User can add a recipe to favorites
+* User can rate and unrate recipes
 
 ### 2. Screen Archetypes
 

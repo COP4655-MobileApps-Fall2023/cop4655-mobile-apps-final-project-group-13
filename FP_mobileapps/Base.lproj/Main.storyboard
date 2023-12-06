@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lbe-6s-UDQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -197,7 +197,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="bCZ-Zi-76r">
-                                <rect key="frame" x="25" y="192.66666666666663" width="343" height="467"/>
+                                <rect key="frame" x="25" y="192.66666666666663" width="343" height="467.00000000000011"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="e3I-yX-1kD">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="398.66666666666669"/>
@@ -424,7 +424,7 @@
                                                         <rect key="frame" x="0.0" y="238" width="375" height="60"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="GIh-TW-Mg7"/>
+                                                            <constraint firstAttribute="width" constant="375" id="GIh-TW-Mg7"/>
                                                             <constraint firstAttribute="height" constant="60" id="sZl-iB-bGC"/>
                                                         </constraints>
                                                         <color key="textColor" systemColor="labelColor"/>
@@ -1286,7 +1286,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxu-IP-WdR" userLabel="Recipe name">
-                                                                    <rect key="frame" x="9.9999999999999858" y="126" width="251.66666666666663" height="56"/>
+                                                                    <rect key="frame" x="10" y="126" width="270.66666666666669" height="56"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Baked salmon with fennel &amp; tomatoes">
                                                                             <attributes>
@@ -1363,7 +1363,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iNG-td-g2i"/>
-        <segue reference="3TQ-La-a8o"/>
+        <segue reference="dU7-qc-FLM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Lock" width="90" height="92"/>
@@ -1378,7 +1378,7 @@
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

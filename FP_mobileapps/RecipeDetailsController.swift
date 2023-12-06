@@ -48,7 +48,7 @@ class RecipeDetailsController: UIViewController {
         // Safely unwrap and set ingredients
         if let ingredients = meal?.formattedIngredients {
             ingredientsLabel.text = ingredients
-            //disable scrolling within the text view
+            // Disable scrolling within the text view
             ingredientsLabel.isScrollEnabled = false
             ingredientsLabel.isEditable = false
             
@@ -57,14 +57,14 @@ class RecipeDetailsController: UIViewController {
             print("Error: Ingredients are nil")
         }
 
-        // Set content compression resistance priority for cookingLabel (or preparationLabel, they are the same in your case)
-       
+        // Set content compression resistance priority for cookingLabel
         cookingLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
+        
         // Safely unwrap and set cooking instructions
         if let instructions = meal?.strInstructions {
             cookingLabel.text = instructions
             
-            //disable scrolling
+            // Disable scrolling
             cookingLabel.isScrollEnabled = false
             cookingLabel.isEditable = false
         } else {
@@ -72,24 +72,20 @@ class RecipeDetailsController: UIViewController {
         }
         
         if meal == nil {
-                if let idMeal = idMeal {
-                    if idMeal.count == 5 {
-                        // If idMeal has a length of 5, fetch details using fetchMealDetails
-                        fetchMealDetails(idMeal: idMeal)
-                    } else {
-                        // If idMeal is present but not of length 5, fetch details from Back4App
-                        fetchMealDetailsFromBack4App(idMeal: idMeal)
-                    }
+            if let idMeal = idMeal {
+                if idMeal.count == 5 {
+                    // If idMeal has a length of 5, fetch details using fetchMealDetails
+                    fetchMealDetails(idMeal: idMeal)
                 } else {
-                    print("Error: idMeal is nil")
+                    // If idMeal is present but not of length 5, fetch details from Back4App
+                    fetchMealDetailsFromBack4App(idMeal: idMeal)
                 }
+            } else {
+                print("Error: idMeal is nil")
             }
-        
-    
-
-            
-
+        }
     }
+
     func fetchMealDetails(idMeal: String) {
         let detailsURLString = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=\(idMeal)"
         guard let url = URL(string: detailsURLString) else {
@@ -99,7 +95,7 @@ class RecipeDetailsController: UIViewController {
 
         fetchData(from: url)
     }
-    
+
     func fetchData(from url: URL) {
         let request = URLRequest(url: url)
 
@@ -132,7 +128,7 @@ class RecipeDetailsController: UIViewController {
 
         task.resume()
     }
-    
+
     func updateUIWithMealDetails(_ mealDetails: Meal) {
         // Update the recipe name
         print("Ingredients to display: \(mealDetails.formattedIngredients)")
@@ -152,13 +148,12 @@ class RecipeDetailsController: UIViewController {
 
         // Load and display the image
         if let imageUrl = URL(string: mealDetails.strMealThumb) {
-            Nuke.loadImage(with: imageUrl, into: recipeImageView)
+            loadImage(from: imageUrl)
         }
     }
-    
+
     func updateUIWithUserMealDetails(_ mealDetails: Post) {
         // Update the recipe name
-        
         recipeNameLabel.text = mealDetails.title
         recipeNameLabel.isEditable = false
 
@@ -172,42 +167,15 @@ class RecipeDetailsController: UIViewController {
         cookingLabel.text = mealDetails.preparation
         cookingLabel.isScrollEnabled = true
         cookingLabel.isEditable = false
-        
-    
-        func configure(with post: Post) {
-            // Assuming post.imageFile.url is a String containing the image URL.
-            if let imageUrlString = post.imageFile?.url,
-               let imageUrl = URL(string: imageUrlString) {
-                loadImage(from: imageUrl)
-            } else {
-                print("❌ Error: Invalid or missing image URL")
-            }
-        }
-        
+
         // Load and display the image
-//        func configure(with post: Post) {
-//            
-//            // Image
-//            if let imageFile = post.imageFile,
-//               let imageUrl = imageFile.url {
-//                
-//                //
-//                imageDataRequest = AF.request(imageUrl).responseImage { [weak self] response in
-//                    switch response.result {
-//                    case .success(let image):
-//                        // Set image view image with fetched image
-//                        self?.recipeImageView.image = image
-//                    case .failure(let error):
-//                        print("❌ Error fetching image: \(error.localizedDescription)")
-//                        break
-//                    }
-//                }
-//            }
-//            
-//        
-//        }
+        if let imageUrlString = mealDetails.imageFile?.url {
+            loadImage(from: imageUrlString)
+        } else {
+            print("❌ Error: Invalid or missing image URL")
+        }
     }
-    
+
     func fetchMealDetailsFromBack4App(idMeal: String) {
         // Create a query for the Meal class in Back4App
         let query = Post.query()
@@ -226,9 +194,9 @@ class RecipeDetailsController: UIViewController {
             }
         }
     }
-    
+
     func loadImage(from url: URL) {
-        imageDataRequest = AF.request(url).responseImage { [weak self] response in
+        imageDataRequest = AF.request(url.absoluteString).responseImage { [weak self] response in
             switch response.result {
             case .success(let image):
                 self?.recipeImageView.image = image
@@ -237,6 +205,4 @@ class RecipeDetailsController: UIViewController {
             }
         }
     }
-    
-    
 }

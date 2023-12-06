@@ -23,6 +23,9 @@ class SignUpViewController: UIViewController{
         let text = "RecipEasy"
         let attributedText = NSMutableAttributedString(string: text)
         
+        // Set the password field to secure text entry
+        passwordField.isSecureTextEntry = true
+        
         // Define the attributes for the first three letters (black color)
         let blackAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.black

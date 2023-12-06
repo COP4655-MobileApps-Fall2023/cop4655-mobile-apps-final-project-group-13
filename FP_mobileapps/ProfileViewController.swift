@@ -14,7 +14,10 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
+   // @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var deleteButton: UIButton!
     
     private var posts = [Post]() {
         didSet {
@@ -153,6 +156,11 @@ class ProfileViewController: UIViewController {
         showConfirmLogoutAlert()
     }
     
+//   func updateDescriptionLabel(with description: String) {
+//        descriptionLabel.text = description
+//    }
+
+    
     private func showConfirmLogoutAlert() {
         let alertController = UIAlertController(title: "Log out of your account?", message: nil, preferredStyle: .alert)
         let logOutAction = UIAlertAction(title: "Log out", style: .destructive) { _ in
@@ -191,13 +199,60 @@ extension ProfileViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as? PostCell else {
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as? PostCell else {
+                return UITableViewCell()
+            }
+            cell.configure(with: posts[indexPath.row])
+
+            let post = posts[indexPath.row]
+            cell.configure(with: post)
+
+                // Set the delete button action
+            cell.deleteButtonAction = { [weak self] in
+                self?.showDeleteConfirmationAlert(for: indexPath)
+                }
+
+            return cell
         }
-        cell.configure(with: posts[indexPath.row])
-        return cell
+
+        
+
+        func showDeleteConfirmationAlert(for indexPath: IndexPath) {
+            let alertController = UIAlertController(
+                title: "Delete Recipe",
+                message: "Are you sure you want to delete this recipe?",
+                preferredStyle: .alert
+            )
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [weak self] _ in
+                // Handle the deletion when the user confirms
+                self?.deleteRecipe(at: indexPath)
+            }
+
+            alertController.addAction(cancelAction)
+            alertController.addAction(deleteAction)
+
+            present(alertController, animated: true, completion: nil)
+        }
+
+        func deleteRecipe(at indexPath: IndexPath) {
+            // Remove the recipe from the UI
+            posts.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+
+            // Perform the actual deletion on your backend (Parse)
+            let deletedRecipe = posts[indexPath.row]
+            deletedRecipe.delete { result in
+                switch result {
+                case .success:
+                    print("Recipe deleted successfully")
+                case .failure(let error):
+                    print("Error deleting recipe: \(error)")
+                }
+            }
+        }
     }
-}
 
 extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

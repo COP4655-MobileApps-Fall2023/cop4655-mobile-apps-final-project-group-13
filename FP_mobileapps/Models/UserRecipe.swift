@@ -21,6 +21,7 @@ struct Post: ParseObject {
     var title: String?
     var ingredients: String?
     var preparation: String?
+    var description: String?
     var user: User?
     var imageFile: ParseFile?
 }

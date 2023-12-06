@@ -17,6 +17,8 @@ class RecipeCreationController: UIViewController {
     @IBOutlet weak var preparationTextView: UITextView!
     @IBOutlet weak var previewImageView: UIImageView!
     
+   // var descriptionCompletion: ((String) -> Void)?
+    
     private var pickedImage: UIImage?
     
     override func viewDidLoad() {
@@ -51,6 +53,12 @@ class RecipeCreationController: UIViewController {
     
     @IBAction func onShareTapped(_ sender: Any) {
 
+//        showDescriptionAlert { description in
+//                // Save the description or pass it to the label on the profile screen
+//            self.saveRecipeWithDescription(description)
+//                // Call the completion closure to pass the description back to the presenting view controller
+//            self.descriptionCompletion?(description)
+//            }
         // Dismiss Keyboard
         view.endEditing(true)
 
@@ -120,6 +128,95 @@ class RecipeCreationController: UIViewController {
 
 
     }
+    
+//    private func showDescriptionAlert(completion: @escaping (String) -> Void) {
+//        let alertController = UIAlertController(title: "Recipe Description", message: "Enter a description for your recipe", preferredStyle: .alert)
+//
+//        alertController.addTextField { textField in
+//            textField.placeholder = "Description"
+//        }
+//
+//        let submitAction = UIAlertAction(title: "Submit", style: .default) { _ in
+//            if let description = alertController.textFields?.first?.text {
+//                // Save the description or pass it to the label on the profile screen
+//                completion(description)
+//            }
+//        }
+//
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//
+//        alertController.addAction(submitAction)
+//        alertController.addAction(cancelAction)
+//
+//        present(alertController, animated: true)
+//    }
+    
+    
+//    private func saveRecipeWithDescription(_ description: String) {
+//        // Unwrap optional pickedImage
+//            guard let image = pickedImage,
+//                  // Create and compress image data (jpeg) from UIImage
+//                  let imageData = image.jpegData(compressionQuality: 0.1) else {
+//                return
+//            }
+//
+//            // Create a Parse File by providing a name and passing in the image data
+//            let imageFile = ParseFile(name: "image.jpg", data: imageData)
+//
+//            // Create Post object
+//            var post = Post()
+//
+//            // Set properties
+//            post.imageFile = imageFile
+//            post.title = titleTextField.text
+//            post.ingredients = ingredientsTextView.text
+//            post.preparation = preparationTextView.text
+//
+//            // Set the description
+//            post.description = description
+//
+//            // Set the user as the current user
+//            post.user = User.current
+//
+//            // Save object in the background (async)
+//            post.save { [weak self] result in
+//                // Switch to the main thread for any UI updates
+//                DispatchQueue.main.async {
+//                    switch result {
+//                    case .success(let post):
+//                        print("✅ Post Saved! \(post)")
+//                        // Get the current user
+//                        if var currentUser = User.current {
+//                            // Update the `lastPostedDate` property on the user with the current date.
+//                            currentUser.lastPostedDate = Date()
+//
+//                            // Save updates to the user (async)
+//                            currentUser.save { [weak self] result in
+//                                switch result {
+//                                case .success(let user):
+//                                    print("✅ User Saved! \(user)")
+//                                    // Switch to the main thread for any UI updates
+//                                    DispatchQueue.main.async {
+//                                        // Return to the previous view controller
+//                                        self?.navigationController?.popViewController(animated: true)
+//                                    }
+//
+//                                case .failure(let error):
+//                                    self?.showAlert(description: error.localizedDescription)
+//                                }
+//                            }
+//                        }
+//
+//                        // Return to the previous view controller
+//                        self?.navigationController?.popViewController(animated: true)
+//
+//                    case .failure(let error):
+//                        self?.showAlert(description: error.localizedDescription)
+//                    }
+//                }
+//            }
+//    }
+    
     
     private func showAlert(description: String? = nil) {
         let alertController = UIAlertController(title: "Oops...", message: "\(description ?? "Please try again...")", preferredStyle: .alert)

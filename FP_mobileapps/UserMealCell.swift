@@ -13,12 +13,13 @@ import AlamofireImage
 class PostCell: UITableViewCell {
     @IBOutlet private weak var recipeTitle: UILabel!
     @IBOutlet private weak var postImage: UIImageView!
-    
-    
 
     @IBOutlet weak var blurView: UIVisualEffectView!
     
     private var imageDataRequest: DataRequest?
+    
+    // Closure to handle delete button action
+    var deleteButtonAction: (() -> Void)?
 
     func configure(with post: Post) {
         
@@ -57,4 +58,18 @@ class PostCell: UITableViewCell {
         imageDataRequest?.cancel()
 
     }
+    
+    // Configure delete button
+        private func setupDeleteButton() {
+            let deleteButton = UIButton(type: .system)
+            deleteButton.setTitle("Delete", for: .normal)
+            deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+            accessoryView = deleteButton
+        }
+
+        // Handle delete button tap
+        @objc private func deleteButtonTapped() {
+            deleteButtonAction?()
+        }
+    
 }

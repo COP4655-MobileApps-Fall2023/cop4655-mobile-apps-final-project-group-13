@@ -114,6 +114,12 @@ In this app, users can view recipes from different categories of food and also b
 ### Demo prep
 ![Demo Prep Video](ezgif.com-video-to-gif.gif)
 
+## Final demo
+<div>
+    <a href="https://www.loom.com/share/249371617c444e9aa5b54029cfa3590a">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/249371617c444e9aa5b54029cfa3590a-1701840277727-with-play.gif">
+    </a>
+  </div>
 
 ## Schema 
 

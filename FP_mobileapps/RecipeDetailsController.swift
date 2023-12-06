@@ -71,9 +71,19 @@ class RecipeDetailsController: UIViewController {
             print("Error: Cooking instructions are nil")
         }
         
-        if meal == nil, let idMeal = idMeal {
-                    fetchMealDetails(idMeal: idMeal)
+        if meal == nil {
+                if let idMeal = idMeal {
+                    if idMeal.count == 5 {
+                        // If idMeal has a length of 5, fetch details using fetchMealDetails
+                        fetchMealDetails(idMeal: idMeal)
+                    } else {
+                        // If idMeal is present but not of length 5, fetch details from Back4App
+                        fetchMealDetailsFromBack4App(idMeal: idMeal)
+                    }
+                } else {
+                    print("Error: idMeal is nil")
                 }
+            }
         
     
 
@@ -164,30 +174,38 @@ class RecipeDetailsController: UIViewController {
         cookingLabel.isEditable = false
         
     
-        
+        func configure(with post: Post) {
+            // Assuming post.imageFile.url is a String containing the image URL.
+            if let imageUrlString = post.imageFile?.url,
+               let imageUrl = URL(string: imageUrlString) {
+                loadImage(from: imageUrl)
+            } else {
+                print("❌ Error: Invalid or missing image URL")
+            }
+        }
         
         // Load and display the image
-        func configure(with post: Post) {
-            
-            // Image
-            if let imageFile = post.imageFile,
-               let imageUrl = imageFile.url {
-                
-                //
-                imageDataRequest = AF.request(imageUrl).responseImage { [weak self] response in
-                    switch response.result {
-                    case .success(let image):
-                        // Set image view image with fetched image
-                        self?.recipeImageView.image = image
-                    case .failure(let error):
-                        print("❌ Error fetching image: \(error.localizedDescription)")
-                        break
-                    }
-                }
-            }
-            
-        
-        }
+//        func configure(with post: Post) {
+//            
+//            // Image
+//            if let imageFile = post.imageFile,
+//               let imageUrl = imageFile.url {
+//                
+//                //
+//                imageDataRequest = AF.request(imageUrl).responseImage { [weak self] response in
+//                    switch response.result {
+//                    case .success(let image):
+//                        // Set image view image with fetched image
+//                        self?.recipeImageView.image = image
+//                    case .failure(let error):
+//                        print("❌ Error fetching image: \(error.localizedDescription)")
+//                        break
+//                    }
+//                }
+//            }
+//            
+//        
+//        }
     }
     
     func fetchMealDetailsFromBack4App(idMeal: String) {
@@ -205,6 +223,17 @@ class RecipeDetailsController: UIViewController {
                 }
             case .failure(let error):
                 print("Error fetching meal details: \(error)")
+            }
+        }
+    }
+    
+    func loadImage(from url: URL) {
+        imageDataRequest = AF.request(url).responseImage { [weak self] response in
+            switch response.result {
+            case .success(let image):
+                self?.recipeImageView.image = image
+            case .failure(let error):
+                print("❌ Error fetching image: \(error.localizedDescription)")
             }
         }
     }

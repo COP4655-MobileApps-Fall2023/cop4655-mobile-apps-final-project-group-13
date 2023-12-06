@@ -131,13 +131,13 @@ class RecipeDetailsController: UIViewController {
 
         // Update the ingredients
         ingredientsLabel.text = mealDetails.formattedIngredients
-        ingredientsLabel.isScrollEnabled = false
+        ingredientsLabel.isScrollEnabled = true
         ingredientsLabel.isEditable = false
         ingredientsLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
 
         // Update the cooking instructions
         cookingLabel.text = mealDetails.strInstructions
-        cookingLabel.isScrollEnabled = false
+        cookingLabel.isScrollEnabled = true
         cookingLabel.isEditable = false
 
         // Load and display the image
@@ -154,13 +154,13 @@ class RecipeDetailsController: UIViewController {
 
         // Update the ingredients
         ingredientsLabel.text = mealDetails.ingredients
-        ingredientsLabel.isScrollEnabled = false
+        ingredientsLabel.isScrollEnabled = true
         ingredientsLabel.isEditable = false
         ingredientsLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
 
         // Update the cooking instructions
         cookingLabel.text = mealDetails.preparation
-        cookingLabel.isScrollEnabled = false
+        cookingLabel.isScrollEnabled = true
         cookingLabel.isEditable = false
         
     

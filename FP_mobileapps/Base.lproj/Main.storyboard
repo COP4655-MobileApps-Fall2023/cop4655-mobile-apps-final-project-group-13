@@ -408,7 +408,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="jNN-Ro-Jcl">
-                                        <rect key="frame" x="0.0" y="0.0" width="383" height="690"/>
+                                        <rect key="frame" x="5" y="0.0" width="383" height="690"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XyN-wg-8lf" userLabel="Recipe Title and Image">
                                                 <rect key="frame" x="0.0" y="0.0" width="383" height="298"/>
@@ -424,7 +424,7 @@
                                                         <rect key="frame" x="0.0" y="238" width="375" height="60"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="375" id="GIh-TW-Mg7"/>
+                                                            <constraint firstAttribute="width" constant="395" id="GIh-TW-Mg7"/>
                                                             <constraint firstAttribute="height" constant="60" id="sZl-iB-bGC"/>
                                                         </constraints>
                                                         <color key="textColor" systemColor="labelColor"/>
@@ -440,10 +440,10 @@
                                                 <rect key="frame" x="0.0" y="304" width="383" height="386"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iOg-dr-O9j" userLabel="Ingredients List">
-                                                        <rect key="frame" x="0.0" y="0.0" width="383" height="145"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="383" height="205"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LG1-Wt-xx7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="383" height="40"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="383" height="100"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pasted Graphic 1" translatesAutoresizingMaskIntoConstraints="NO" id="yfm-yu-E1g">
                                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -465,7 +465,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wIH-nh-uRA">
-                                                                <rect key="frame" x="0.0" y="45" width="383" height="100"/>
+                                                                <rect key="frame" x="0.0" y="105" width="383" height="100"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -473,11 +473,10 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="wIH-nh-uRA" firstAttribute="top" secondItem="LG1-Wt-xx7" secondAttribute="bottom" constant="5" id="UHn-Pa-E2L"/>
-                                                            <constraint firstAttribute="bottom" secondItem="wIH-nh-uRA" secondAttribute="bottom" id="cCS-Gg-a0a"/>
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kkj-si-NS1" userLabel="Preparation List">
-                                                        <rect key="frame" x="0.0" y="150" width="383" height="236"/>
+                                                        <rect key="frame" x="0.0" y="210" width="383" height="176"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wyC-46-9kX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="383" height="50"/>
@@ -506,14 +505,14 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HhG-gp-u0h">
-                                                                <rect key="frame" x="0.0" y="54" width="383" height="128"/>
+                                                                <rect key="frame" x="0.0" y="54" width="383" height="68"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QIH-ZM-zE4">
-                                                                <rect key="frame" x="0.0" y="186" width="383" height="50"/>
+                                                                <rect key="frame" x="0.0" y="126" width="383" height="50"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -531,7 +530,7 @@
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="kkj-si-NS1" firstAttribute="top" secondItem="Ktk-ek-wd6" secondAttribute="top" constant="150" id="v6O-Zz-Co8"/>
+                                                    <constraint firstItem="kkj-si-NS1" firstAttribute="top" secondItem="Ktk-ek-wd6" secondAttribute="top" constant="210" id="v6O-Zz-Co8"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -541,7 +540,7 @@
                                     <constraint firstItem="jNN-Ro-Jcl" firstAttribute="height" secondItem="Bdg-kr-xZI" secondAttribute="height" multiplier="0.921228" id="2CG-VD-23f"/>
                                     <constraint firstAttribute="bottom" secondItem="jNN-Ro-Jcl" secondAttribute="bottom" id="7td-hT-dVj"/>
                                     <constraint firstAttribute="trailing" secondItem="jNN-Ro-Jcl" secondAttribute="trailing" id="Eb5-XD-d9a"/>
-                                    <constraint firstItem="jNN-Ro-Jcl" firstAttribute="leading" secondItem="Bdg-kr-xZI" secondAttribute="leading" id="Zeu-Tx-kaz"/>
+                                    <constraint firstItem="jNN-Ro-Jcl" firstAttribute="leading" secondItem="Bdg-kr-xZI" secondAttribute="leading" constant="5" id="Zeu-Tx-kaz"/>
                                     <constraint firstItem="jNN-Ro-Jcl" firstAttribute="width" secondItem="Bdg-kr-xZI" secondAttribute="width" multiplier="0.974555" id="pJb-gD-D3j"/>
                                     <constraint firstItem="jNN-Ro-Jcl" firstAttribute="top" secondItem="Bdg-kr-xZI" secondAttribute="top" id="y5U-nH-OJb"/>
                                 </constraints>

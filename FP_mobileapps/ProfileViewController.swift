@@ -23,6 +23,8 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    
+    
     let avatarImages = [
         "avatar1",
         "avatar2",
@@ -56,7 +58,7 @@ class ProfileViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.allowsSelection = false
+        tableView.allowsSelection = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -169,6 +171,17 @@ class ProfileViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "userDetails",
+           let detailViewController = segue.destination as? RecipeDetailsController,
+           let selectedIndexPath = tableView.indexPathForSelectedRow {
+            let selectedPost = posts[selectedIndexPath.row]
+            // Assuming Post model has a property for meal ID or Meal object
+            detailViewController.idMeal = selectedPost.objectId // Or set the meal object if available
+        }
+    }
+
+    
 }
 
 
@@ -186,4 +199,9 @@ extension ProfileViewController: UITableViewDataSource {
     }
 }
 
-extension ProfileViewController: UITableViewDelegate { }
+extension ProfileViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPost = posts[indexPath.row]
+        
+    }
+}

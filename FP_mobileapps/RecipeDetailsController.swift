@@ -8,12 +8,17 @@
 import Foundation
 import Nuke
 import UIKit
+import ParseSwift
+import Alamofire
+import AlamofireImage
 
 class RecipeDetailsController: UIViewController {
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeNameLabel: UITextView!
     @IBOutlet weak var ingredientsLabel: UITextView!
     @IBOutlet weak var cookingLabel: UITextView!
+    
+    private var imageDataRequest: DataRequest?
     
     struct MealDetailResponse: Decodable {
         var meals: [Meal]
@@ -69,6 +74,8 @@ class RecipeDetailsController: UIViewController {
         if meal == nil, let idMeal = idMeal {
                     fetchMealDetails(idMeal: idMeal)
                 }
+        
+    
 
             
 
@@ -136,6 +143,69 @@ class RecipeDetailsController: UIViewController {
         // Load and display the image
         if let imageUrl = URL(string: mealDetails.strMealThumb) {
             Nuke.loadImage(with: imageUrl, into: recipeImageView)
+        }
+    }
+    
+    func updateUIWithUserMealDetails(_ mealDetails: Post) {
+        // Update the recipe name
+        
+        recipeNameLabel.text = mealDetails.title
+        recipeNameLabel.isEditable = false
+
+        // Update the ingredients
+        ingredientsLabel.text = mealDetails.ingredients
+        ingredientsLabel.isScrollEnabled = false
+        ingredientsLabel.isEditable = false
+        ingredientsLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
+
+        // Update the cooking instructions
+        cookingLabel.text = mealDetails.preparation
+        cookingLabel.isScrollEnabled = false
+        cookingLabel.isEditable = false
+        
+    
+        
+        
+        // Load and display the image
+        func configure(with post: Post) {
+            
+            // Image
+            if let imageFile = post.imageFile,
+               let imageUrl = imageFile.url {
+                
+                //
+                imageDataRequest = AF.request(imageUrl).responseImage { [weak self] response in
+                    switch response.result {
+                    case .success(let image):
+                        // Set image view image with fetched image
+                        self?.recipeImageView.image = image
+                    case .failure(let error):
+                        print("❌ Error fetching image: \(error.localizedDescription)")
+                        break
+                    }
+                }
+            }
+            
+        
+        }
+    }
+    
+    func fetchMealDetailsFromBack4App(idMeal: String) {
+        // Create a query for the Meal class in Back4App
+        let query = Post.query()
+            .where("objectId" == idMeal)
+        query.find { result in
+            switch result {
+            case .success(let meals):
+                print("Fetched JSON:", meals)
+                if let mealDetails = meals.first {
+                    DispatchQueue.main.async {
+                        self.updateUIWithUserMealDetails(mealDetails)
+                    }
+                }
+            case .failure(let error):
+                print("Error fetching meal details: \(error)")
+            }
         }
     }
     

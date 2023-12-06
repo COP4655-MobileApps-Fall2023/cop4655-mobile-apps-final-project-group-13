@@ -112,8 +112,7 @@ In this app, users can view recipes from different categories of food and also b
 ![Sprint2Gif](ezgif.com-video-to-gif.gif)
 
 ### Demo prep
-[![Demo Prep Video](ezgif.com-video-to-gif.gif)](https://player.vimeo.com/video/888008070?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479)
-https://player.vimeo.com/video/888008070?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479
+![Demo Prep Video](ezgif.com-video-to-gif.gif)
 
 
 ## Schema 
